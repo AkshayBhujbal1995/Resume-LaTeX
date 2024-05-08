@@ -1,0 +1,257 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Akshay Bhujbal} \\[7.5pt]
+\href{https://github.com/AkshayBhujbal1995}{\raisebox{-0.05\height}\faGithub\ AkshayBhujbal1995} \ $|$ \ 
+\href{https://www.linkedin.com/in/bhujbalakshay/}{\raisebox{-0.05\height}\faLinkedin\ AkshayBhujbal} \ $|$ \ 
+\href{https://akshaybhujbal1995.github.io/portfolio.github.io/}{\raisebox{-0.05\height}\faGlobe \ Portfolio.com} \ $|$ \ 
+\href{akshay.bhujbal16@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ akshay.bhujbal16@gmail.com} \ $|$ \ 
+\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +91 7499902809} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+Experienced Data Analyst proficient in transforming complex datasets into actionable insights. Skilled in Python, SQL, and Microsoft Power BI, with a proven track record in sales analytics and strategic planning. Adept at data visualization and A/B testing methodologies, committed to continuous learning. Seeking opportunities to contribute to dynamic, data-driven projects
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Sales Analytics Specialist - Scally's Centra} & \hfill Nov 2021 - Jul 2023 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Successfully managed and expanded client base, achieving a 20 percent increase in sales revenue. Utilized CRM software for customer insights and collaborated on real-time sales performance dashboards. Enhanced organizational productivity and efficiency through data-driven strategies and targeted marketing initiatives.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Analyst / Research Assistant - Northside Partnership} & \hfill Sep 2020 - Dec 2021 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Collaborated with cross-functional teams to analyze complex datasets, utilizing Tableau and Excel for data visualization. Spearheaded A/B testing methodologies, resulting in increased customer engagement and program success. Proficiently employed SQL for data extraction and transformation, ensuring data integrity and reliability.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Nonprofit Data Analyst Specialist - Ostomy Association of Ireland} & \hfill Apr 2019 - Sep 2020 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Utilized Microsoft Forms to gather insights from conference participants, conducting comprehensive analysis to extract meaningful trends. Contributed to data-driven decision-making, optimizing processes, and enhancing data accuracy. Collaborated with teams to deliver high-quality services, aligning with the organization's mission to support individuals with stomas and internal pouches.}  \\
+\end{tabularx}
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{HR Analytics Power BI Dashboard} & \hfill \href{https://github.com/AkshayBhujbal1995/HR-Analytics-Power-BI-Dashboard}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Description: Utilizes Power BI to analyze employee attrition factors and their impact.
+Tools/Technologies: Power BI, data visualization.
+Outcome:Insights into factors contributing to employee attrition for organizational improvement.} 
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Diwali Sales Analysis using Python} & \hfill \href{https://github.com/AkshayBhujbal1995/Diwali-Sales-Analysis-using-Python/blob/main/Diwali_Sales_Analysis.ipynb}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Description: Analyzes sales trends during Diwali using Python, offering insights for optimization.
+Tools/Technologies: Python, data analysis libraries.
+Outcome: Enhanced understanding of sales patterns for strategic planning.}  \\
+\end{tabularx}
+
+
+
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Crust-to-Crumb Understanding Pizza Sales Metrics using SQL} & \hfill \href{https://github.com/AkshayBhujbal1995/Crust-to-Crumb-Understanding-Pizza-Sales-Metrics-using-SQL}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+Description: Analyzes pizza sales data using SQL, uncovering insights into sales metrics.
+Tools/Technologies: SQL, data analysis.
+Outcome: Insights into pizza sales performance and customer preferences.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data-Driven Approach to Predict Solar Flares Research Proposal} & \hfill \href{https://github.com/AkshayBhujbal1995/Data-Driven-Approach-to-Predict-Solar-Flares-Research-Proposal}{Link to Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+Description: Proposes a data-driven method to predict solar flares, crucial for space weather forecasting.
+Tools/Techniques: Machine learning, data analysis.
+Outcome: Potential advancement in space weather forecasting.}  \\
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2018 - 2019 &  Postgraduate Diploma in Data Analytics at \textbf{National College of Ireland} \hfill \normalsize  \\
+
+2012 - 2013 & Bachelor's Degree at \textbf{Pune University} \hfill  \\ 
+
+2012 & Class 12th \textbf{Maharashtra HSC} \hfill   \\
+
+2010 & Class 10th \textbf{Maharashtra SSC} \hfill   \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%-------------------------------------------------------------------
+\section{CERTIFICATES}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Visualisation: Empowering Business with Effective Insights, Tata Group:} & \hfill{2023} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{ This certificate signifies completion of a course or program offered by Tata Group focused on data visualization techniques to empower business decision-making with effective insights.} 
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Analytics Consulting Virtual Internship, KPMG:} & \hfill{2023} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{This certificate represents participation in a virtual internship program provided by KPMG, where practical experience in data analytics consulting was gained through simulated consulting projects.} 
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Analytics and Visualization Job, Accenture:} & \hfill{2023} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{This certificate indicates involvement in a job or project related to data analytics and visualization at Accenture, a global professional services company.} 
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Java for Absolute Beginners, Udemy:} & \hfill{2022} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{ This certificate demonstrates proficiency in Java programming language fundamentals, obtained through a beginner-level course on Udemy.} 
+
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Data Science A-Z™: Real-Life Data Science Exercises Included, Udemy:} & \hfill{2021} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{This certificate signifies completion of a comprehensive data science course on Udemy, covering various aspects of real-life data science exercises and applications.} 
+
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+
+\textbf{Excel:}& \hfill Advanced \\ Advanced
+\textbf{Business Intelligence (BI) Tools:} & \hfill Advanced \\
+\textbf{Critical Thinking and Problem-Solving:} & \hfill Advanced \\
+\textbf{Data Manipulation:} & \hfill Expert \\
+\textbf{Machine Learning:} & \hfill Advanced \\
+\textbf{Power BI:}  & \hfill  Advanced \\
+\textbf{SQL:}& \hfill Expert \\
+\textbf{Python:} & \hfill Advanced \\
+\textbf{Data Visualization:} & \hfill Expert \\
+\textbf{Statistical Analysis:} & \hfill Advanced \\
+\textbf{Data Analysis:} & \hfill Expert \\
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
